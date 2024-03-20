@@ -1,0 +1,25 @@
+const colors = {
+    appBlack: '#000000',
+    logoBlue: '#242a98',
+    logoPink: '#e324ac',
+    appWhite: '#ffffff',
+    textBlack: '#0d0d0d',
+    appGray: '#696969',
+    appDarkGray: '#292929',
+    darkPlaceholder: '#010101',
+    darkBorderColor: '#8e8e8e',
+    darkWhiteText:'#fbfbfb',
+    appBlue:'#1a40e8',
+    greenBorder:'#93cc8f',
+    switchBg:'#eff1f2',
+    switchThumbBg:'#fefffd',
+    appPurple:'#8312a2',
+    loginInputLight:'#c480d9',
+    lightOTPBorder:'#979797',
+    blueBorder:'#0469ff',
+    lighGreen:'#05ba29',
+    red:'#b90f02',
+    warningRed: "#e3342f",
+}
+
+export default colors;

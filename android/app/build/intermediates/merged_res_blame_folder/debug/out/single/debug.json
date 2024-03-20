@@ -1,0 +1,310 @@
+[
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_pluscircle.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_pluscircle.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_close.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_close.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_star.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_star.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_requestnotfound.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_requestnotfound.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_muscle.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_muscle.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_verticalthreedot.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_verticalthreedot.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_leftarrow.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_leftarrow.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_heart.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_heart.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_hideeye.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_hideeye.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_moon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_moon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_camera.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_camera.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_imagegallary.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_imagegallary.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_multipleuserssilhouette.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_multipleuserssilhouette.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_question.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_question.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_chatbubbleswithellipsis.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_chatbubbleswithellipsis.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_comment.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_comment.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_logout.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_logout.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_check.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_check.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_images_emptycommentlist.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_images_emptycommentlist.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-xxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-xxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_like.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_like.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_orangetwitter.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_orangetwitter.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_pagenotfound.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_pagenotfound.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_time.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_time.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_upload.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_upload.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_group.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_group.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_location.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_location.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_orangeinsta.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_orangeinsta.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_sendmessageicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_sendmessageicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_horizontalline.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_horizontalline.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_user.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_user.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_savepost.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_savepost.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-xhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_burgermenu.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_burgermenu.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_images_sampleprofile.jpeg.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_images_sampleprofile.jpeg"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_images_globe.jpeg.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_images_globe.jpeg"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_vieweye.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_vieweye.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_uparrow.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_uparrow.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_lockicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_lockicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_swipearrowleft.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_swipearrowleft.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_editpencil.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_editpencil.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_lefticon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_lefticon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_sun.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_sun.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_conversation.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_conversation.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_orangefacebook.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_orangefacebook.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_images_placeholder.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_images_placeholder.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_share.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_share.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_emailicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_emailicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_videocamicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_videocamicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_wind.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_wind.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_mic.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_mic.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_swipearrowright.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_swipearrowright.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_send.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_send.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_info.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_info.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_threedots.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_threedots.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_addfriend.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_addfriend.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_globe.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_globe.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_phoneicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_phoneicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_arrowrightsmall.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_arrowrightsmall.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_home.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_home.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.chatapp-main-38:/drawable-xxxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_email.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_email.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.chatapp-main-38:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.chatapp-main-38:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.chatapp-merged_res-36:/drawable-mdpi_src_assets_icons_search.png.flat",
+        "source": "com.chatapp-main-38:/drawable-mdpi/src_assets_icons_search.png"
+    }
+]

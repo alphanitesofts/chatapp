@@ -1,0 +1,132 @@
+current directory: /Users/aliahmad/Desktop/Alphanite/ChatApp/vendor/bundle/ruby/2.7.0/gems/json-2.7.1/ext/json/ext/generator
+/Users/aliahmad/.rbenv/versions/2.7.6/bin/ruby -I /Users/aliahmad/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20240119-95617-lj2vui.rb extconf.rb
+creating Makefile
+
+current directory: /Users/aliahmad/Desktop/Alphanite/ChatApp/vendor/bundle/ruby/2.7.0/gems/json-2.7.1/ext/json/ext/generator
+make "DESTDIR=" clean
+
+current directory: /Users/aliahmad/Desktop/Alphanite/ChatApp/vendor/bundle/ruby/2.7.0/gems/json-2.7.1/ext/json/ext/generator
+make "DESTDIR="
+compiling generator.c
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby.h:33:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/defines.h:126:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/stdio.h:64:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_stdio.h:68:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/cdefs.h:913:2: error: Unsupported architecture
+#error Unsupported architecture
+ ^
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby.h:33:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/defines.h:126:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/stdio.h:64:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_stdio.h:71:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_types.h:27:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:33:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/machine/_types.h:34:2: error: architecture not supported
+#error architecture not supported
+ ^
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby.h:33:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/defines.h:126:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/stdio.h:64:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_stdio.h:71:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_types.h:27:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:55:9: error: unknown type name '__int64_t'; did you mean '__int128_t'?
+typedef __int64_t       __darwin_blkcnt_t;      /* total blocks */
+        ^
+note: '__int128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:56:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?
+typedef __int32_t       __darwin_blksize_t;     /* preferred block size */
+        ^
+note: '__int128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:57:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?
+typedef __int32_t       __darwin_dev_t;         /* dev_t */
+        ^
+note: '__int128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:60:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?
+typedef __uint32_t      __darwin_gid_t;         /* [???] process and group IDs */
+        ^
+note: '__uint128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:61:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?
+typedef __uint32_t      __darwin_id_t;          /* [XSI] pid_t, uid_t, or gid_t*/
+        ^
+note: '__uint128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:62:9: error: unknown type name '__uint64_t'; did you mean '__uint128_t'?
+typedef __uint64_t      __darwin_ino64_t;       /* [???] Used for 64 bit inodes */
+        ^
+note: '__uint128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:68:9: error: unknown type name '__darwin_natural_t'
+typedef __darwin_natural_t __darwin_mach_port_name_t; /* Used by mach */
+        ^
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:70:9: error: unknown type name '__uint16_t'; did you mean '__uint128_t'?
+typedef __uint16_t      __darwin_mode_t;        /* [???] Some file attributes */
+        ^
+note: '__uint128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:71:9: error: unknown type name '__int64_t'; did you mean '__int128_t'?
+typedef __int64_t       __darwin_off_t;         /* [???] Used for file sizes */
+        ^
+note: '__int128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:72:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?
+typedef __int32_t       __darwin_pid_t;         /* [???] process and group IDs */
+        ^
+note: '__int128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:73:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?
+typedef __uint32_t      __darwin_sigset_t;      /* [???] signal set */
+        ^
+note: '__uint128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:74:9: error: unknown type name '__int32_t'; did you mean '__int128_t'?
+typedef __int32_t       __darwin_suseconds_t;   /* [???] microseconds */
+        ^
+note: '__int128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:75:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?
+typedef __uint32_t      __darwin_uid_t;         /* [???] user IDs */
+        ^
+note: '__uint128_t' declared here
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types.h:76:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?
+typedef __uint32_t      __darwin_useconds_t;    /* [???] microseconds */
+        ^
+note: '__uint128_t' declared here
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby.h:33:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/defines.h:126:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/stdio.h:64:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_stdio.h:71:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_types.h:43:9: error: unknown type name '__uint32_t'; did you mean '__uint128_t'?
+typedef __uint32_t      __darwin_wctype_t;
+        ^
+note: '__uint128_t' declared here
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby.h:33:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/defines.h:126:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/stdio.h:64:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_stdio.h:75:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types/_va_list.h:31:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/machine/types.h:37:2: error: architecture not supported
+#error architecture not supported
+ ^
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby.h:33:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:29:
+In file included from /Users/aliahmad/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/defines.h:126:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/stdio.h:64:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/_stdio.h:75:
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.0.sdk/usr/include/sys/_types/_va_list.h:32:9: error: unknown type name '__darwin_va_list'
+typedef __darwin_va_list va_list;
+        ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [generator.o] Error 1
+
+make failed, exit code 2

@@ -1,0 +1,7 @@
+#Mon Mar 18 19:24:44 PKT 2024
+base.0=/Users/aliahmad/Desktop/Alphanite/Chat-App/android/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+base.1=/Users/aliahmad/Desktop/Alphanite/Chat-App/android/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/14/classes.dex
+path.0=0/classes.dex
+path.1=14/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
