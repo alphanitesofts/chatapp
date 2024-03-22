@@ -1,4 +1,0 @@
-com.chatapp.test.app-androidTest-0 /Users/aliahmad/Desktop/Alphanite/Chat-App/android/app/build/generated/res/resValues/androidTest/debug
-com.chatapp.test.app-mergeDebugAndroidTestResources-1 /Users/aliahmad/Desktop/Alphanite/Chat-App/android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.chatapp.test.app-mergeDebugAndroidTestResources-2 /Users/aliahmad/Desktop/Alphanite/Chat-App/android/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.chatapp.test.app-merged_res-3 /Users/aliahmad/Desktop/Alphanite/Chat-App/android/app/build/intermediates/merged_res/debugAndroidTest

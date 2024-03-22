@@ -4,6 +4,7 @@ import {
     SafeAreaView,
     ScrollView,
     Text,
+    TouchableOpacity,
     View
 } from 'react-native';
 import Header from '../../chunks/Members/Header';
@@ -19,6 +20,7 @@ import AddMemberModal from '../../chunks/Members/AddMemeberModal';
 import { useDispatch, useSelector } from 'react-redux';
 import { setToastMessage } from '../../redux/actions/actions';
 import ToastMessage from '../../components/ToastMessage';
+import RequestModal from '../../chunks/Contacts/RequestModal';
 
 
 const RoundView = ({ children, mainContainer }) => {
@@ -45,7 +47,11 @@ const Members = ({ navigation, route }) => {
 
     const [loading, setLoading] = useState(false)
     const [details, setDetails] = useState()
+    const [userDetails,setUserDetails]=useState()
     const [modalName, setModalName] = useState("")
+    const [modalNameI, setModalNameI] = useState("")
+    const [identifier,setIdentifier]=useState("Members")
+
     const [inviteListIds, setInvitListIds] = useState()
 
     useEffect(() => {
@@ -68,6 +74,7 @@ const Members = ({ navigation, route }) => {
     }
 
     const addPublicMemebers = async () => {
+        console.log(inviteListIds,groupDetails.id)
         const body = {
             members: inviteListIds
         }
@@ -122,14 +129,21 @@ const Members = ({ navigation, route }) => {
         }
     }
 
-    const renderItem = ({ item, index }) => {
+    const RenderItem = ({ item }) => {
+        const [showUserCard,setShowUserCard]=useState(false)
 
         return (
             <View style={[styles.renderContainer, {
                 borderBottomWidth: item === details[details?.length - 1] ? 0 : 0.5,
             }]}>
 
-                <View style={styles.renderFirstRowContainer}>
+                <TouchableOpacity 
+                onPress={()=> {
+                    setModalNameI("RequestModal")
+                    setIdentifier("Members")
+                    setUserDetails(item)
+                }}
+                style={styles.renderFirstRowContainer}>
                     <ImageComponent
                         source={`${IMAGE_URL}/${item?.image}`}
                         alternate={Images.placeholder}
@@ -141,17 +155,22 @@ const Members = ({ navigation, route }) => {
                         }}
                     />
                     <Text style={styles.renderText} numberOfLines={3} ellipsizeMode='tail'>{item?.username}</Text>
-                </View>
+                </TouchableOpacity>
+
+            
             </View>
         )
     }
+    // console.log("group",groupDetails)
 
     return (
         <SafeAreaView style={styles.mainContainer}>
             <Header
                 title={groupDetails?.group_name || "--"}
                 navigation={navigation}
-                onAddPress={() => setModalName("add")}
+                onAddPress={() => {setModalName("add")                   
+                  setIdentifier("Add_Members")
+            }}
             />
             <ScrollView style={{ width: '100%' }}>
                 <View style={styles.infoContainer}>
@@ -167,7 +186,11 @@ const Members = ({ navigation, route }) => {
                     <RoundView>
                         <FlatList
                             data={details}
-                            renderItem={renderItem}
+                            renderItem={({item})=>{
+                                return (
+                                    <RenderItem item={item}/>
+                                )
+                            }}
                         />
                     </RoundView>
 
@@ -178,6 +201,37 @@ const Members = ({ navigation, route }) => {
                 isShowIndicator={true}
             />
             <ToastMessage />
+
+
+            {modalNameI === "RequestModal"  &&
+    <RequestModal
+                
+    navigation={navigation}
+    details={userDetails}
+    onClosePress={() => setModalNameI("")}
+    onSuccess={(message) => {
+        setModalNameI("")
+        // dispatch(setToastMessage({
+        //     type: "success",
+        //     message: message
+        // }))
+    }}
+    onError={(message) => {
+        setModalNameI("")
+        // dispatch(setToastMessage({
+        //     type: "error",
+        //     message: message
+        // }))
+        // getContacts(userId)
+    }}
+    identifier={identifier}
+    
+    />
+                }
+            
+
+
+
             {modalName === "add" && <AddMemberModal
                 joinedMembers={details}
                 onCrossPress={() => setModalName("")}
@@ -191,6 +245,11 @@ const Members = ({ navigation, route }) => {
                     if (groupDetails?.group_type === "public") addPublicMemebers()
                     else addPrivateMembers()
                 }}
+                onCheckDetails={(val)=>{
+                    setUserDetails(val)
+                    setModalNameI("RequestModal")
+                }}
+                groupID={groupDetails.id}
             />}
         </SafeAreaView>
     )

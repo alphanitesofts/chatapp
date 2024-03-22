@@ -19,14 +19,14 @@ const ContactCard = ({
     return (
         <TouchableOpacity style={styles.renderContainer} onPress={() => onPress && onPress(item)}>
             <ImageComponent
-                source={`${IMAGE_URL}/${item?.requester_id_image}`}
+                source={`${IMAGE_URL}/${item?.requester_id_image || item?.image}`}
                 alternate={Images.sampleProfile}
                 mainStyle={styles.renderImageStyle}
             />
             <View style={styles.detailContainer}>
-                <Text style={styles.chatNameText}>{item?.requester_id_name || "--"}</Text>
+                <Text style={styles.chatNameText}>{item?.requester_id_name || item?.username || "--"}</Text>
                 <View style={{ width: "100%", flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Text style={styles.locationText}>{item?.requester_id_location || "--"}</Text>
+                    <Text style={styles.locationText}>{item?.requester_id_location || item?.location || "--"}</Text>
                     <Text style={styles.dateText}>{item?.Idate || "--"}</Text>
                 </View>
             </View>

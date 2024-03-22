@@ -21,6 +21,7 @@ import ToastMessage from '../../components/ToastMessage';
 
 const AddContactModal = ({
     onClosePress,
+    onCheckDetails
 }) => {
 
     const { userId } = useSelector(state => state.userSession)
@@ -79,7 +80,10 @@ const AddContactModal = ({
     const renderItem = ({ item }) => {
         return (
             <View style={[styles.renderContainer, { borderBottomWidth: 1 }]}>
-                <View style={styles.rowContainer}>
+                <TouchableOpacity 
+                
+                onPress={()=> onCheckDetails(item)}
+                style={styles.rowContainer}>
                     <ImageComponent
                         source={item?.image !== "default" && item?.image !== "null" ? `${IMAGE_URL}/${item?.image}` : Images.placeholder}
                         mainStyle={{
@@ -93,7 +97,7 @@ const AddContactModal = ({
                     <TouchableOpacity style={styles.requestButtonContainer} onPress={() => sendContactRequest(item.id)}>
                         <Text style={styles.sendText}>Send Request</Text>
                     </TouchableOpacity>
-                </View>
+                </TouchableOpacity>
             </View>
         )
     }

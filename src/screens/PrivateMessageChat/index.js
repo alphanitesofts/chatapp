@@ -129,8 +129,9 @@ const PrivateMessageChat = ({ navigation, route }) => {
             <ChatScreenHeader
                 title={chatDetails?.username || "Chat"}
                 imageSource={`${IMAGE_URL}/${chatDetails?.image || chatDetails?.requester_id_image}`}
+                onImagePress={()=>  navigation.navigate("OtherUserDetails", { otherUserId: chatDetails?.requester_id || chatDetails?.id})   }
                 onBackPress={() => navigation.goBack()}
-                disabledImgButton={true}
+                disabledImgButton={false}
                 status={"Online"}
             />
             <KeyboardAvoidingView

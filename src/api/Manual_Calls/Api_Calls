@@ -1,0 +1,19 @@
+function getRecentChat(id){
+    const formdata = new FormData();
+formdata.append("user_id", id);
+
+const requestOptions = {
+  method: "POST",
+  body: formdata,
+  redirect: "follow"
+};
+
+fetch("https://chatapp.alphanitesofts.net/api/getLastMessages", requestOptions)
+  .then((response) => response.json())
+  .then((result) =>{
+
+    return result
+  })
+  .catch((error) => {return "error"});
+}
+export {getRecentChat}

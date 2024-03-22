@@ -35,8 +35,8 @@ const ChatListCard = ({
                     <Text style={styles.chatNameText}>{item?.username || "--"}</Text>
                     {/* <Text style={styles.dateText}>07/18/2022</Text> */}
                 </View>
-                {/* <Text style={styles.locationText}>Mobile</Text>
-                <Text style={styles.chatDescText}>Come Support Your Favorite Snack Shop while Supplies Last</Text> */}
+            {/* <Text style={styles.locationText}>Mobile</Text> */}
+                <Text style={styles.chatDescText}>{item?.message}</Text> 
             </View>
         </TouchableOpacity>
     )

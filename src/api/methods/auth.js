@@ -43,3 +43,4 @@ export const processInvitation = (payload) => postWithFormRequest(`/process_invi
 export const fetchGroupsUserNotMemeber = (id) => postRequest(`/fetch_public_groups_user_not_member/${id}`, id)
 export const postContactRequest = (payload) => postWithFormRequest(`/post_contact_request`, payload)
 export const deleteMember = (payload, id) => postRequest(`/deleteMembers/${id}`, payload, id)
+export const getLastMessages = (payload) => postRequest(`/getLastMessages`, payload)

@@ -19,19 +19,23 @@ import { fetchAllUsers } from '../../api/methods/auth';
 import ImageComponent from '../../components/ImageComponent';
 import { IMAGE_URL } from '../../api/config';
 import Images from '../../assets/images';
+import { fetchContactsNotInGroup } from '../../api/Manual_Calls/AllCalls';
 
-
+import { useSelector } from 'react-redux';
 const AddMemberModal = ({
     onCrossPress,
     onConfirmPress,
     onChange,
-    joinedMembers
+    joinedMembers,
+    onCheckDetails,
+    groupID
 }) => {
 
     const dispatch = useDispatch()
 
     const [list, setList] = useState([])
     const [loading, setLoading] = useState(false)
+    const { userId } = useSelector(state => state.userSession)
 
     useEffect(() => {
         list && list?.length > 0 && onChange && onChange(list?.filter((item) => item.isSelected).map((e) => `${e.id}`))
@@ -40,15 +44,21 @@ const AddMemberModal = ({
     useEffect(() => {
         getAllUsers()
     }, [])
+// const slectedlistdata=    list && list?.length > 0 && onChange && onChange(list?.filter((item) => item.isSelected).map((e) => `${e.id}`))
 
 
     const getAllUsers = async () => {
+        // console.log(userId,groupID)
         setLoading(true)
         try {
-            const response = await fetchAllUsers()
-            if (response?.data?.status === "200") {
-                const filteredList = response?.data?.Users?.filter((item) => !joinedMembers.some((e) => e.id === item.id))
-                setList(filteredList)
+            const response = await fetchContactsNotInGroup(userId,groupID)
+           
+            if (response?.status === "200") {
+                // const filteredList = response?.data?.Users?.filter((item) => !joinedMembers.some((e) => e.id === item.id))
+                // setList(response?.contacts_not_in_group)
+                // console.log(response?.contacts_not_in_group)
+                setList(response?.contacts_not_in_group)
+                console.log(response?.contacts_not_in_group)
             }
         } catch (error) {
             dispatch(setToastMessage({
@@ -63,7 +73,9 @@ const AddMemberModal = ({
     const renderItem = ({ item }) => {
         return (
             <View style={[styles.renderContainer, { borderBottomWidth: 1 }]}>
-                <View style={styles.rowContainer}>
+                <TouchableOpacity 
+                onPress={()=> onCheckDetails? onCheckDetails(item):{}}
+                style={styles.rowContainer}>
                     <ImageComponent
                         source={item?.image !== "default" && item?.image !== "null" ? `${IMAGE_URL}/${item?.image}` : Images.placeholder}
                         mainStyle={{
@@ -82,7 +94,7 @@ const AddMemberModal = ({
                     >
                         {item?.isSelected && <View style={styles.innerRoundContainer}></View>}
                     </TouchableOpacity>
-                </View>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -116,7 +128,7 @@ const AddMemberModal = ({
                     mainContainer={{ height: 45, marginTop: 'auto' }}
                     titleAllCaps={true}
                     titleColor={{ letterSpacing: 10 }}
-                    onPress={onConfirmPress}
+                    onPress={()=>onConfirmPress()}
                 />
             </View>
             <ToastMessage />

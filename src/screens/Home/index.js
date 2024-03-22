@@ -21,7 +21,7 @@ import ImageComponent from '../../components/ImageComponent';
 import { IMAGE_URL } from '../../api/config';
 import fonts from '../../../assets';
 import ProfileInfoModal from '../../chunks/Home/ProfileInfoModal';
-
+import RequestModal from '../../chunks/Contacts/RequestModal';
 
 const Home = ({ navigation }) => {
 
@@ -286,12 +286,39 @@ const Home = ({ navigation }) => {
             {modalName === "profile" && <ProfileCardModal
                 onCrossPress={() => setModalName("")}
             />}
-            {modalName === "view_profile" && <ProfileInfoModal
-                details={selectedUser}
-                data={userList}
-                navigation={navigation}
-                onClosePress={() => setModalName("")}
-            />}
+            {modalName === "view_profile" && 
+            // <ProfileInfoModal
+            //     details={selectedUser}
+            //     data={userList}
+            //     navigation={navigation}
+            //     onClosePress={() => setModalName("")}
+            // />
+
+            <RequestModal
+                
+    navigation={navigation}
+    details={selectedUser}
+    onClosePress={() => setModalName("")}
+    onSuccess={(message) => {
+        setModalName("")
+        // dispatch(setToastMessage({
+        //     type: "success",
+        //     message: message
+        // }))
+    }}
+    onError={(message) => {
+        setModalName("")
+        // dispatch(setToastMessage({
+        //     type: "error",
+        //     message: message
+        // }))
+        // getContacts(userId)
+    }}
+    identifier={"Members"}
+    
+    />
+            
+            }
             <Loader
                 loading={loading}
                 isShowIndicator={true}

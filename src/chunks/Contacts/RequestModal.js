@@ -4,7 +4,8 @@ import {
     View,
     Text,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Modal
 } from 'react-native';
 import AppButton from '../../components/AppButton';
 import Images from '../../assets/images';
@@ -12,18 +13,20 @@ import Icons from '../../assets/icons';
 import { IMAGE_URL } from '../../api/config';
 import ImageComponent from '../../components/ImageComponent';
 import Loader from '../../components/Loader';
-import { updateContactRequestStatus } from '../../api/methods/auth';
+import { postContactRequest, updateContactRequestStatus } from '../../api/methods/auth';
 import newColors from '../../utils/newColors';
 import fonts from '../../../assets';
 import AppGreenButton from '../../components/AppGreenButton';
 import AppGrayButton from '../../components/AppGrayButton';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { setToastMessage } from '../../redux/actions/actions';
 const ActionButton = ({
     icon,
     onPress,
     mainContainer,
     iconStyle
 }) => {
+
     return (
         <TouchableOpacity style={[styles.actionButtonContainer, mainContainer]} onPress={onPress}>
             <Image
@@ -39,8 +42,11 @@ const RequestModal = ({
     onClosePress,
     details,
     onError,
-    navigation
+    navigation,
+    identifier
 }) => {
+    const dispatch = useDispatch()
+    const { userId } = useSelector(state => state.userSession)
 
     useEffect(()=>{
         console.log("details==>>",details);
@@ -65,17 +71,54 @@ const RequestModal = ({
         }
     }
 
+
+    const sendContactRequest = async (id) => {
+        setLoading(true)
+        try {
+            const formData = new FormData()
+            formData.append("requester_id", userId) 
+            formData.append("requested_id", details?.id||details?.requester_id)
+            formData.append("status", "pending")
+            const response = await postContactRequest(formData)
+            if (response?.data?.status === "200") {
+                dispatch(setToastMessage({
+                    type: "success",
+                    message: response?.data?.message
+                }))
+                setTimeout(()=>{
+                    onClosePress&&onClosePress()
+                },1000)
+            }
+        } catch (error) {
+            dispatch(setToastMessage({
+                type: "error",
+                message: error?.response?.data?.message
+            }))
+        } finally {
+            setLoading(false)
+            onClosePress&&onClosePress()
+        }
+    }
+
+console.log(details)
+
     return (
+        <Modal 
+    visible={true}
+    animationType='slide'
+    transparent={true}
+        >
+
         <View style={styles.mainContainer}>
             <View style={styles.borderContainer}>
                 <View style={{ width: '100%', alignItems: 'center', marginBottom: 15 }}>
                     <ImageComponent
-                        source={`${IMAGE_URL}/${details?.requester_id_image}`}
+                        source={`${IMAGE_URL}/${details?.requester_id_image || details?.image}`}
                         alternate={Images.sampleProfile}
                         mainStyle={{ borderRadius: 100 }}
                     />
-                    <Text style={styles.requstNameText}>{details?.requester_id_name || "--"}</Text>
-                    <Text style={styles.positionText}>{details?.requester_id_location || "--"}</Text>
+                    <Text style={styles.requstNameText}>{details?.requester_id_name || details?.username || "--"}</Text>
+                    <Text style={styles.positionText}>{details?.requester_id_location || details?.location ||"--"}</Text>
                     <Text style={styles.dateText}>{details?.Idate || "--"}</Text>
                     <View style={styles.rowContainer}>
                         <ActionButton
@@ -90,14 +133,22 @@ const RequestModal = ({
                             mainContainer={{ marginHorizontal: 15 }}
                             onPress={() => {
                                 onClosePress && onClosePress()
-                                navigation.navigate("OtherUserDetails", { otherUserId: details?.requester_id })
+                                navigation.navigate("OtherUserDetails", { otherUserId: details?.requester_id || details?.id})
                             }}
                         />
+                        {
+                           identifier === "Members"&&
                         <ActionButton
-                            icon={Icons.questionMark}
+                        onPress={()=>
+                            sendContactRequest()
+                        }
+                        icon={Icons.PlusCircle}
                         />
+                    }
                     </View>
                 </View>
+                {
+                    identifier === "request" &&
                 <View style={{ width: "100%", alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <AppButton
                         title={"Decline"}
@@ -114,7 +165,9 @@ const RequestModal = ({
                         mainContainer={{ marginVertical: 15, width: '48%' }}
                     />
                 </View>
-                <AppGrayButton
+                }
+
+<AppGrayButton
                     title={"Close"}
                     titleAllCaps={true}
                     onPress={onClosePress}
@@ -125,6 +178,7 @@ const RequestModal = ({
                 isShowIndicator={true}
             />
         </View>
+        </Modal>
 
     )
 }

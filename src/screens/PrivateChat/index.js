@@ -18,13 +18,13 @@ import Icons from '../../assets/icons';
 import ToastMessage from '../../components/ToastMessage';
 import Loader from '../../components/Loader';
 import { setToastMessage } from '../../redux/actions/actions';
-import { deleteMember, fetchPrivateGroups, fetchUserContacts } from '../../api/methods/auth';
+import { deleteMember, fetchPrivateGroups, fetchUserContacts, getLastMessages } from '../../api/methods/auth';
 import { useIsFocused } from '@react-navigation/native';
 import fonts from '../../../assets';
 import newColors from '../../utils/newColors';
 
-
-const PrivateChat = ({ navigation }) => {
+import { getRecentChat } from '../../api/Manual_Calls/AllCalls';
+const   PrivateChat = ({ navigation }) => {
 
     const { userId } = useSelector(state => state.userSession)
 
@@ -43,17 +43,21 @@ const PrivateChat = ({ navigation }) => {
     const getUserContacs = async (id) => {
         setLoading(true)
         try {
-            const formData = new FormData()
-            formData.append("user_id", id)
-            const response = await fetchUserContacts(formData)
+            const response = await getRecentChat(id)
+
+            setChats(response?.last_messages_with_users)
+
             if (response?.data?.status === "200") {
 
-                setChats(response?.data?.contact_data)
+                setChats(response?.last_messages_with_users)
+                console.log(response)
+
             }
+            console.log(response)
         } catch (error) {
             dispatch(setToastMessage({
                 type: "error",
-                message: error?.response?.data?.message
+                message: "someting Went wrong"
             }))
         } finally {
             setLoading(false)

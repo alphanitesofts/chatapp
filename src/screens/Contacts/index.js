@@ -19,7 +19,8 @@ import { useIsFocused } from '@react-navigation/native';
 import Icons from '../../assets/icons';
 import newColors from '../../utils/newColors';
 import AddContactModal from '../../chunks/Contacts/AddContactModal';
-
+import { fetchUserContacts } from '../../api/methods/auth';
+import Selector from '../../chunks/PublicChat/Selector';
 const Contacts = ({ navigation }) => {
 
     const { appTheme, userId } = useSelector(state => state.userSession)
@@ -28,18 +29,24 @@ const Contacts = ({ navigation }) => {
     const dispatch = useDispatch()
 
     const [modalName, setModalName] = useState("")
+    const [modalNameI, setModalNameI] = useState("")
+
     const [loading, setLoading] = useState(false)
     const [list, setList] = useState([])
+    const [selesction,setSelection]=useState("1")
+    const [contactList,setContactList]=useState([])
     const [selectedRequest, setSelectedRequest] = useState()
+    const [identifier, setIdentifier] = useState("contact")
 
     useEffect(() => {
         if (isFocused && userId) {
+            getUserContacs(userId)
             getContacts(userId)
         }
     }, [isFocused, userId])
 
     const getContacts = async (id) => {
-        setLoading(true)
+        // setLoading(true)
         try {
             const response = await fetchContactRequestsById(id)
             if (response?.data?.status === "200") setList(response?.data?.Data)
@@ -52,6 +59,26 @@ const Contacts = ({ navigation }) => {
             setLoading(false)
         }
     }
+    const getUserContacs = async (id) => {
+        setLoading(true)
+        try {
+            const formData = new FormData()
+            formData.append("user_id", id)
+            const response = await fetchUserContacts(formData)
+            if (response?.data?.status === "200") {
+console.log(response?.data?.contact_data)
+                setContactList(response?.data?.contact_data)
+            }
+        } catch (error) {
+            dispatch(setToastMessage({
+                type: "error",
+                message: error?.response?.data?.message
+            }))
+        } finally {
+            setLoading(false)
+            // getPrivateGroups(userId)
+        }
+    }
 
     const renderItem = ({ item, index }) => {
         return (
@@ -59,7 +86,7 @@ const Contacts = ({ navigation }) => {
                 item={item}
                 onPress={(selectedItem) => {
                     setSelectedRequest(selectedItem)
-                    setModalName("request")
+                    setModalNameI("request")
                 }}
             />
         )
@@ -69,7 +96,9 @@ const Contacts = ({ navigation }) => {
         <SafeAreaView style={styles.mainContainer}>
             <View style={styles.headerStyle}>
                 <Text style={styles.titleText}>Contacts</Text>
-                <TouchableOpacity style={styles.plusContainer} onPress={() => setModalName("add")}>
+                <TouchableOpacity style={styles.plusContainer} onPress={() => {
+                    setIdentifier("send_request")
+                    setModalName("add")}}>
                     <Image
                         source={Icons.PlusCircle}
                         style={{
@@ -80,9 +109,25 @@ const Contacts = ({ navigation }) => {
                     />
                 </TouchableOpacity>
             </View>
+            <Selector
+                    items={[
+                        { id: "1", label: "Contacts", },
+                        { id: "2", label: "Requests" },
+                    ]}
+                    keyToRender={"label"}
+                    appTheme={appTheme}
+                    defaultValue={selesction}
+                    onChange={(item) => {
+                        
+              setIdentifier(item?.id === "1"? "contact":"request")
+                        setSelection(item?.id)
+                    
+                    }}
+                    mainStyle={{ marginBottom: 5 }}
+                />
             <FlatList
                 renderItem={renderItem}
-                data={list}
+                data={selesction === "1" ?contactList : list}
                 keyExtractor={(item, index) => index}
                 ListEmptyComponent={() => {
                     if (loading) return null
@@ -105,14 +150,23 @@ const Contacts = ({ navigation }) => {
                 }}
             />
             {modalName === "add" && <AddContactModal
-                onClosePress={() => setModalName("")}
+                onClosePress={() => {setModalName("")
+            setIdentifier(selesction === "1"?"contact": "request")
+            }}
+                onCheckDetails={(val)=>{
+                    setSelectedRequest(val)
+                    // setIdentifier("request")
+                    setModalNameI("request")
+
+                }}
             />}
-            {modalName === "request" && <RequestModal
+            {modalNameI === "request" && 
+            <RequestModal
             navigation={navigation}
                 details={selectedRequest}
-                onClosePress={() => setModalName("")}
+                onClosePress={() => setModalNameI("")}
                 onSuccess={(message) => {
-                    setModalName("")
+                    setModalNameI("")
                     dispatch(setToastMessage({
                         type: "success",
                         message: message
@@ -120,13 +174,14 @@ const Contacts = ({ navigation }) => {
                     getContacts(userId)
                 }}
                 onError={(message) => {
-                    setModalName("")
+                    setModalNameI("")
                     dispatch(setToastMessage({
                         type: "error",
                         message: message
                     }))
                     getContacts(userId)
                 }}
+                identifier={identifier}
             />}
             <ToastMessage />
             <Loader
